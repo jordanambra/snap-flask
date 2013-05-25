@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <title>Snap - Flask Version</title>
+</head>
+<body>
+    <div class="container">
+        <div style="height: 100px;"></div>
+        <div class="row">
+            <div class="span8 offset2">    
+                <div class="hero-unit">
+                    <h1>Welcome to Snap!</h1>
+                    <p>This is the Flask version of Snap. You now have a complete, working Vagrant environment, provisioned by chef</p>
+                    <p>
+                        <button id="bacon-button" class="btn btn-danger btn-large">Rub Some Bacon On It</button>
+                    </p>
+                    <div id="bacon" style="display: none;">
+                        <img src="http://bacolicious.s3.amazonaws.com/bacon.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(evt) {
+            $("#bacon-button").click(function(evt) {
+                $("#bacon").toggle();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+server {
+        listen 80;
+
+        access_log /var/log/nginx/snap_access.log;
+        error_log /var/log/nginx/snap_error.log;
+
+        location / {
+          # the socket an port your wsgi daemon listens on
+          uwsgi_pass unix:/tmp/uwsgi.sock;
+          include uwsgi_params;
+          root /srv/snap;
+        }
+}

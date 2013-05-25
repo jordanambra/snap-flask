@@ -1,0 +1,15 @@
+upstream web {
+    server 192.168.50.101;
+    server 192.168.50.102;
+}
+
+server {
+        listen 80;
+
+        access_log /var/log/nginx/snap_access.log;
+        error_log /var/log/nginx/snap_error.log;
+
+        location / {
+            proxy_pass http://web;
+        }
+}
